@@ -1,7 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { initExecutorch } from 'react-native-executorch';
+import { ExpoResourceFetcher } from 'react-native-executorch-expo-resource-fetcher';
+import { models, useTextToSpeech } from "react-native-executorch"
+
+initExecutorch({
+  resourceFetcher: ExpoResourceFetcher
+})
 
 export default function App() {
+
   return (
     <View style={styles.container}>
       <Text>Orange Radio Station Broadcasting 24/7</Text>
